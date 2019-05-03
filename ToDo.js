@@ -5,10 +5,13 @@ import PropTypes from "prop-types";
 const { width, hight } = Dimensions.get("window");
 
 export default class ToDo extends Component {
+    constructor(props) {
+        super(props);
+    };
     static propTypes = {
         text: PropTypes.string.isRequired,
         isCompleted: PropTypes.bool.isRequired
-    }
+    };
     state = {
         isEditing: false,
         toDoValue: ""
@@ -76,8 +79,7 @@ export default class ToDo extends Component {
     _startEditing = () => {
         const { text } = this.props;
         this.setState({
-            isEditing: true,
-            toDoValue: text
+            isEditing: true
         });
     };
     _finishEditing = () => {
