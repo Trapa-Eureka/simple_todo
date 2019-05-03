@@ -74,7 +74,6 @@ export default class ToDo extends Component {
         });
     };
     _startEditing = () => {
-        const { text } = this.props;
         this.setState({
             isEditing: true
         });
