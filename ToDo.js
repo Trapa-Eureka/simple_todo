@@ -7,14 +7,11 @@ const { width, hight } = Dimensions.get("window");
 export default class ToDo extends Component {
     constructor(props) {
         super(props);
+        this.state = { isEditing: false, toDoValue: props.text };
     };
     static propTypes = {
         text: PropTypes.string.isRequired,
         isCompleted: PropTypes.bool.isRequired
-    };
-    state = {
-        isEditing: false,
-        toDoValue: ""
     };
     render () {
         const { isCompleted, isEditing, toDoValue } = this.state;
