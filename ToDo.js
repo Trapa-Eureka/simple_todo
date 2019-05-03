@@ -13,7 +13,9 @@ export default class ToDo extends Component {
         text: PropTypes.string.isRequired,
         isCompleted: PropTypes.bool.isRequired,
         deleteToDo: PropTypes.func.isRequired,
-        id: PropTypes.string.isRequired
+        id: PropTypes.string.isRequired,
+        uncompleteToDo: PropTypes.func.isRequired,
+        completeToDo: PropTypes.func.isRequired
     };
     render () {
         const { isCompleted, isEditing, toDoValue } = this.state;
