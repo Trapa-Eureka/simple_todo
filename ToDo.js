@@ -5,9 +5,12 @@ import PropTypes from "prop-types";
 const { width, hight } = Dimensions.get("window");
 
 export default class ToDo extends Component {
+    static propTypes = {
+        text: PropTypes.string.isRequired,
+        isCompleted: PropTypes.bool.isRequired
+    }
     state = {
         isEditing: false,
-        isCompleted: false,
         toDoValue: ""
     };
     render () {
