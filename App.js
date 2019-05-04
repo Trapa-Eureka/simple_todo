@@ -150,6 +150,7 @@ export default class App extends React.Component {
       return { ...newState };
     });
   };
+  // AsyncStorage is not save to 'Object'. so need to change 'String'
   _saveToDos = (newToDos) => {
     const saveToDos = AsyncStorage.setItem("toDos", JSON.stringify(newToDos));
   };
